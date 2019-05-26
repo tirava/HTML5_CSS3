@@ -1,0 +1,49 @@
+
+@import vars
+
+=border($width, $color)
+    border-width: $width
+    border-style: solid
+    border-color: $color
+    
+header
+    width: $site-width
+    margin: 0 auto
+    height: 100px
+    background-color: green
+    @extend .dflex
+    +border(2px, red)
+
+.dflex
+    display: flex
+
+.menu
+    @extend .dflex
+    li
+        list-style-type: none
+    a
+        color: red
+        padding: 15px
+        text-decoration: none
+        &:hover
+            color: blue
+            text-decoration: underline
+
+main
+    width: $site-width
+    margin: 0 auto
+    background-color: orange
+    display: flex
+    flex-wrap: wrap
+
+.item
+    width: $site-width / 3 - $border-width * 2
+    height: 200px
+    +border(1px, black)
+
+footer
+    width: $site-width
+    margin: 0 auto
+    height: 100px
+    background-color: #ccc
+    +border(3px, green)
