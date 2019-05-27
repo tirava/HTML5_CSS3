@@ -1,59 +1,127 @@
+body {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 header {
-  width: 600px;
-  margin: 0 auto;
-  height: 100px;
-  background-color: green;
-  border-width: 2px;
-  border-style: solid;
-  border-color: red;
-}
-
-.dflex, header, .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu li {
-  list-style-type: none;
+.logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  width: 50px;
+  height: 48px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-.menu a {
-  color: red;
-  padding: 15px;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  color: blue;
-  text-decoration: underline;
-}
-
-main {
-  width: 600px;
-  margin: 0 auto;
-  background-color: orange;
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  letter-spacing: -1px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.item {
-  width: 198px;
-  height: 200px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+.menu li {
+  list-style-type: none;
+  padding: 10px 0 10px 0;
 }
 
-footer {
-  width: 600px;
-  margin: 0 auto;
-  height: 100px;
-  background-color: #ccc;
-  border-width: 3px;
-  border-style: solid;
-  border-color: green;
+.menu li:hover {
+  background-color: #ffbb42;
+}
+
+.menu li:active {
+  background-color: darkgrey;
+}
+
+.menu a {
+  color: #868686;
+  padding: 15px;
+  text-decoration: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #709dca;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.boost {
+  padding-top: 60px;
+  color: white;
+  text-align: center;
+}
+
+.boost h1 {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.boost p {
+  font-size: 16px;
+}
+
+.contacts {
+  padding-bottom: 50px;
+}
+
+.contacts input {
+  height: 46px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 3px;
+  border-style: none;
+  padding-left: 40px;
+  margin-left: 7px;
+  width: 281px;
+  margin-top: 10px;
+}
+
+.contacts input[type="text"] {
+  background: white url("../img/name.png") no-repeat center left 15px;
+}
+
+.contacts input[type="email"] {
+  background: white url("../img/email.png") no-repeat center left 15px;
+}
+
+.contacts input[type="tel"] {
+  background: white url("../img/phone.png") no-repeat center left 15px;
+}
+
+.contacts input[type="submit"] {
+  padding: 0;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 211px;
+  background-color: #ffbb42;
+  cursor: pointer;
+}
+
+.contacts input[type="submit"]:active {
+  background-color: darkgrey;
 }

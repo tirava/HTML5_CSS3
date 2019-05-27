@@ -1,49 +1,109 @@
 
 @import vars
 
-=border($width, $color)
-    border-width: $width
-    border-style: solid
-    border-color: $color
+// =border($width, $color)
+//     border-width: $width
+//     border-style: solid
+//     border-color: $color
+// +border(2px, red)
+    
+// .dflex
+//     display: flex
+    // @extend .dflex
+
+body
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+    max-width: 1280px
+    margin: 0 auto
     
 header
-    width: $site-width
-    margin: 0 auto
-    height: 100px
-    background-color: green
-    @extend .dflex
-    +border(2px, red)
-
-.dflex
     display: flex
+    justify-content: space-around
+    padding: 10px 0 10px 0
+    align-items: center
+
+.logo
+    background-image: url(../img/logo.png)
+    background-size: cover
+    width: 50px
+    height: 48px
+    flex-shrink: 0
 
 .menu
-    @extend .dflex
+    display: flex
+    letter-spacing: -1px
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    flex-wrap: wrap
     li
         list-style-type: none
+        padding: 10px 0 10px 0
+        &:hover
+            background-color: #ffbb42
+        &:active
+            background-color: darkgrey
     a
-        color: red
+        color: #868686
         padding: 15px
         text-decoration: none
-        &:hover
-            color: blue
-            text-decoration: underline
 
 main
-    width: $site-width
-    margin: 0 auto
-    background-color: orange
     display: flex
-    flex-wrap: wrap
+    background-color: #709dca
+    // height: 589px
+    justify-content: center
 
-.item
-    width: $site-width / 3 - $border-width * 2
-    height: 200px
-    +border(1px, black)
+.boost
+    padding-top: 60px
+    color: white
+    text-align: center
+    h1
+        font-size: 35px
+        font-weight: bold
+        letter-spacing: -1px
+        text-transform: uppercase
+        margin-bottom: -10px
+    p
+        font-size: 16px
 
-footer
-    width: $site-width
-    margin: 0 auto
-    height: 100px
-    background-color: #ccc
-    +border(3px, green)
+.contacts
+    padding-bottom: 50px
+
+    input
+        height: 46px
+        font-size: 13px
+        font-weight: 400
+        border-radius: 3px
+        border-style: none
+        padding-left: 40px
+        margin-left: 7px
+        width: 281px
+        margin-top: 10px
+
+    input[type="text"]
+        background: white url('../img/name.png') no-repeat center left 15px
+
+    input[type="email"]
+        background: white url('../img/email.png') no-repeat center left 15px
+
+    input[type="tel"]
+        background: white url('../img/phone.png') no-repeat center left 15px
+        
+    input[type="submit"]
+        padding: 0
+        color: white
+        font-size: 14px
+        text-transform: uppercase
+        width: 211px
+        background-color: #ffbb42
+        cursor: pointer
+        &:active
+            background-color: darkgrey
+
+// footer
+    // width: $site-width
+    // margin: 0 auto
+    // height: 100px
+    // background-color: #ccc
+    // +border(3px, green)
