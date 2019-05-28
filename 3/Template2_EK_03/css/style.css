@@ -1,6 +1,7 @@
 body {
   font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
   max-width: 1280px;
+  min-width: 480px;
   margin: 0 auto;
 }
 
@@ -56,18 +57,9 @@ header {
   text-decoration: none;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #709dca;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .boost {
-  padding-top: 60px;
+  background-color: #709dca;
+  padding: 60px 10px 290px 10px;
   color: white;
   text-align: center;
 }
@@ -124,4 +116,58 @@ main {
 
 .contacts input[type="submit"]:active {
   background-color: darkgrey;
+}
+
+.promo {
+  margin: 0 auto;
+  height: 343px;
+  background: url(../img/macbook.png) no-repeat center;
+  position: relative;
+  bottom: 280px;
+}
+
+.promo .pub {
+  background: url(../img/pub.png) no-repeat center;
+  height: 298px;
+}
+
+.wheels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -280px;
+  padding-top: 24px;
+}
+
+.wheels .wheel {
+  background: url(../img/wheel_pass.png) no-repeat center;
+  width: 16px;
+  height: 15px;
+  padding-left: 10px;
+}
+
+.wheels .wheel:hover {
+  background: url(../img/wheel_act.png) no-repeat center;
+  cursor: pointer;
+}
+
+.services {
+  text-align: center;
+  padding-top: 60px;
+  color: #394b50;
+}
+
+.services h2 {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.services p {
+  font-size: 16px;
 }

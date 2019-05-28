@@ -13,7 +13,8 @@
 
 body
     font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
-    max-width: 1280px
+    max-width: $max-width
+    min-width: $min-width
     margin: 0 auto
     
 header
@@ -48,14 +49,9 @@ header
         padding: 15px
         text-decoration: none
 
-main
-    display: flex
-    background-color: #709dca
-    // height: 589px
-    justify-content: center
-
 .boost
-    padding-top: 60px
+    background-color: #709dca
+    padding: 60px 10px 290px 10px
     color: white
     text-align: center
     h1
@@ -100,6 +96,44 @@ main
         cursor: pointer
         &:active
             background-color: darkgrey
+
+.promo
+    margin: 0 auto
+    height: 343px
+    background: url(../img/macbook.png) no-repeat center
+    position: relative
+    bottom: $bottom_rel
+    .pub
+        background: url(../img/pub.png) no-repeat center
+        height: $bottom_rel + 18
+        
+
+.wheels
+    display: flex
+    justify-content: center
+    margin-top: -$bottom_rel
+    padding-top: 24px
+    .wheel
+        background: url(../img/wheel_pass.png) no-repeat center
+        width: 16px
+        height: 15px
+        padding-left: 10px
+        &:hover
+            background: url(../img/wheel_act.png) no-repeat center
+            cursor: pointer
+
+.services
+    text-align: center
+    padding-top: 60px
+    color: #394b50
+    h2
+        font-size: 30px
+        font-weight: bold
+        letter-spacing: -1px
+        text-transform: uppercase
+        margin-bottom: -10px
+    p
+        font-size: 16px
 
 // footer
     // width: $site-width
