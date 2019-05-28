@@ -1,16 +1,6 @@
 
 @import vars
 
-// =border($width, $color)
-//     border-width: $width
-//     border-style: solid
-//     border-color: $color
-// +border(2px, red)
-    
-// .dflex
-//     display: flex
-    // @extend .dflex
-
 body
     font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
     max-width: $max-width
@@ -18,7 +8,8 @@ body
     margin: 0 auto
     
 header
-    display: flex
+    @extend .dflex
+    flex-wrap: nowrap
     justify-content: space-around
     padding: 10px 0 10px 0
     align-items: center
@@ -31,12 +22,10 @@ header
     flex-shrink: 0
 
 .menu
-    display: flex
+    @extend .dflex
     letter-spacing: -1px
-    font-size: 14px
-    font-weight: 400
+    +setfont(14px, 400, "", "")
     text-transform: uppercase
-    flex-wrap: wrap
     li
         list-style-type: none
         padding: 10px 0 10px 0
@@ -50,26 +39,23 @@ header
         text-decoration: none
 
 .boost
-    background-color: #709dca
+    background-color: $back_blue
     padding: 60px 10px 290px 10px
-    color: white
     text-align: center
     h1
-        font-size: 35px
-        font-weight: bold
+        +setfont(35px, bold, white, "")
         letter-spacing: -1px
         text-transform: uppercase
         margin-bottom: -10px
     p
-        font-size: 16px
+        +setfont(16px, 300, white, "")
 
 .contacts
     padding-bottom: 50px
 
     input
         height: 46px
-        font-size: 13px
-        font-weight: 400
+        +setfont(13px, 400, "", "")
         border-radius: 3px
         border-style: none
         padding-left: 40px
@@ -88,8 +74,7 @@ header
         
     input[type="submit"]
         padding: 0
-        color: white
-        font-size: 14px
+        +setfont(14px, 400, white, "")
         text-transform: uppercase
         width: 211px
         background-color: #ffbb42
@@ -109,7 +94,7 @@ header
         
 
 .wheels
-    display: flex
+    @extend .dflex
     justify-content: center
     margin-top: -$bottom_rel
     padding-top: 24px
@@ -125,42 +110,36 @@ header
 .services
     text-align: center
     padding-top: 60px
-    color: #394b50
     h2
-        font-size: 30px
-        font-weight: bold
+        +setfont(30px, bold, $color_hx, $lineheight_px)
         letter-spacing: -1px
         text-transform: uppercase
         margin-bottom: -10px
     p
-        font-size: 16px
+        +setfont(16px, 400, $color_hx, $lineheight_px)
     .items
-        display: flex
-        flex-wrap: wrap
+        @extend .dflex
         justify-content: center
+        padding-top: 30px
         figure
-            display: flex
-            flex: 0 1 550px
+            @extend .dflex
+            flex-wrap: nowrap
+            flex: 0 1 $width_items
+            img
+                width: 50px
+                height: 50px
             figcaption
                 text-align: left
                 padding-left: 35px
-                line-height: 22px
                 h3
-                    font-size: 16px
-                    font-weight: bold
-                    line-height: 22px
+                    +setfont(16px, bold, $color_hx, $lineheight_px)
                     text-transform: uppercase
                     margin-bottom: -5px
                 p
-                    color: #7b7b7b
-                    font-size: 13px
-                    font-weight: 400
+                    +setfont(13px, 400, $color_px, $lineheight_px)
 
 footer
-    background-color: #709dca
-    padding: 20px 0 20px 0
-    font-size: 13px
-    font-weight: 400
-    line-height: 24px
-    color: white
+    background-color: $back_blue
+    padding: 20px 10px 20px 10px
+    +setfont(13px, 400, white, 24px)
     text-align: center
