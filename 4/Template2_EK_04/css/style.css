@@ -139,8 +139,12 @@ header {
 }
 
 .promo .pub {
-  background: url(../img/pub.png) no-repeat center;
-  height: 298px;
+  text-align: center;
+  padding-top: 18px;
+}
+
+.promo .pub video {
+  width: 445px;
 }
 
 .wheels {

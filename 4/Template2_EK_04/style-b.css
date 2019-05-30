@@ -1,0 +1,12 @@
+.box {
+    height: 150px;
+    border: 1px solid black;
+}
+
+i {
+    font-size: 30px;
+}
+
+audio {
+    width: 360px;
+}
