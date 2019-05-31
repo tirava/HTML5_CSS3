@@ -13,6 +13,13 @@ $lineheight_px: 22px
     color: $color
     line-height: $height
 
+=setbutton($hover, $active)
+    &:hover
+        cursor: pointer
+        background-color: $hover
+    &:active
+        background-color: $active
+
 .dflex
     display: flex
     flex-wrap: wrap

@@ -29,10 +29,7 @@ header
     li
         list-style-type: none
         padding: 10px 0 10px 0
-        &:hover
-            background-color: #ffbb42
-        &:active
-            background-color: darkgrey
+        +setbutton(#ffbb42, darkgrey)
     a
         color: #868686
         padding: 15px
@@ -78,9 +75,7 @@ header
         text-transform: uppercase
         width: 211px
         background-color: #ffbb42
-        cursor: pointer
-        &:active
-            background-color: darkgrey
+        +setbutton(lightgrey, darkgrey)
 
 .promo
     margin: 0 auto
@@ -113,6 +108,7 @@ header
 .services
     text-align: center
     padding-top: 60px
+    padding-bottom: 100px
     h2
         +setfont(30px, bold, $color_hx, $lineheight_px)
         letter-spacing: -1px
@@ -137,6 +133,38 @@ header
                     margin-bottom: -5px
                 p
                     +setfont(13px, 400, $color_px, $lineheight_px)
+
+.about
+    @extend .dflex
+    justify-content: center
+    flex-wrap: nowrap
+    background-color: #ffc155
+    align-items: center
+    .img
+        background: url(../img/about.png) no-repeat center
+        width: 850px
+        height: 623px
+        background-size: cover
+    .text
+        flex: 1 1 690px
+        padding: 0 80px 0 80px
+        h2
+            +setfont(30px, bold, white, $lineheight_px)
+            text-transform: uppercase
+        p
+            +setfont(13px, 400, white, 24px)
+            padding-bottom: 20px
+            align-items: flex-start
+        .button
+            +setfont(14px, 400, white, "")
+            text-transform: uppercase
+            border: 1px solid #e7ad48
+            width: 145px
+            text-align: center
+            padding: 10px 0 10px 0
+            +setbutton(lightgrey, darkgrey)
+        a
+            text-decoration: none
 
 footer
     background-color: $back_blue

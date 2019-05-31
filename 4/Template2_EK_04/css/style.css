@@ -1,4 +1,4 @@
-.dflex, header, .menu, .wheels, .services .items, .services .items figure {
+.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +48,7 @@ header {
 }
 
 .menu li:hover {
+  cursor: pointer;
   background-color: #ffbb42;
 }
 
@@ -123,7 +124,11 @@ header {
   text-transform: uppercase;
   width: 211px;
   background-color: #ffbb42;
+}
+
+.contacts input[type="submit"]:hover {
   cursor: pointer;
+  background-color: lightgrey;
 }
 
 .contacts input[type="submit"]:active {
@@ -170,6 +175,7 @@ header {
 .services {
   text-align: center;
   padding-top: 60px;
+  padding-bottom: 100px;
 }
 
 .services h2 {
@@ -223,6 +229,76 @@ header {
   font-weight: 400;
   color: #7b7b7b;
   line-height: 22px;
+}
+
+.about {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #ffc155;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .img {
+  background: url(../img/about.png) no-repeat center;
+  width: 850px;
+  height: 623px;
+  background-size: cover;
+}
+
+.about .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 690px;
+          flex: 1 1 690px;
+  padding: 0 80px 0 80px;
+}
+
+.about .text h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.about .text p {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  line-height: 24px;
+  padding-bottom: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about .text .button {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  border: 1px solid #e7ad48;
+  width: 145px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.about .text .button:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.about .text .button:active {
+  background-color: darkgrey;
+}
+
+.about .text a {
+  text-decoration: none;
 }
 
 footer {
