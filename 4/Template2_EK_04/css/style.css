@@ -1,4 +1,4 @@
-.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about {
+.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about, .price .items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +175,7 @@ header {
 .services {
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 
 .services h2 {
@@ -191,7 +191,7 @@ header {
 .services p {
   font-size: 16px;
   font-weight: 400;
-  color: #394b50;
+  color: #7b7b7b;
   line-height: 22px;
 }
 
@@ -254,7 +254,7 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 690px;
           flex: 1 1 690px;
-  padding: 0 80px 0 80px;
+  padding: 20px 80px 20px 80px;
 }
 
 .about .text h2 {
@@ -271,34 +271,150 @@ header {
   color: white;
   line-height: 24px;
   padding-bottom: 20px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
-.about .text .button {
+.about .text input {
   font-size: 14px;
   font-weight: 400;
   color: white;
   line-height: "";
   text-transform: uppercase;
   border: 1px solid #e7ad48;
+  background-color: #ffbb42;
   width: 145px;
-  text-align: center;
-  padding: 10px 0 10px 0;
+  height: 46px;
 }
 
-.about .text .button:hover {
+.about .text input:hover {
   cursor: pointer;
   background-color: lightgrey;
 }
 
-.about .text .button:active {
+.about .text input:active {
   background-color: darkgrey;
 }
 
-.about .text a {
-  text-decoration: none;
+.price {
+  background-color: #e7edf3;
+  padding: 100px 0 120px 0;
+  text-align: center;
+}
+
+.price h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #394b50;
+  line-height: "";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: -10px;
+}
+
+.price p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.price .items {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.price .items .item {
+  background-color: white;
+  border: 1px solid #ccd5df;
+  margin: 5px;
+  padding: 25px;
+  width: 391px;
+}
+
+.price .items .item:hover {
+  background-color: #709dca;
+  color: white;
+}
+
+.price .items .item:hover p, .price .items .item:hover h3, .price .items .item:hover span, .price .items .item:hover li {
+  color: white;
+}
+
+.price .items .item h3 {
+  font-size: 25px;
+  font-weight: 300;
+  color: #818b95;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.price .items .item .dollar {
+  font-size: 36px;
+  font-weight: 300;
+  color: #ffc155;
+  line-height: 22px;
+  position: relative;
+  top: -20px;
+}
+
+.price .items .item span {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffc155;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price .items .item p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #818b95;
+  line-height: 22px;
+  font-variant: small-caps;
+  margin-top: 0px;
+}
+
+.price .items .item ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding-top: 10px;
+}
+
+.price .items .item li {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b5bbc1;
+  line-height: 40px;
+  text-transform: uppercase;
+  border-top: 1px solid #e2e9f0;
+}
+
+.price .items .item input {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  border: none;
+  background-color: #ffbb42;
+  width: 131px;
+  height: 42px;
+  margin-bottom: 15px;
+}
+
+.price .items .item input:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.price .items .item input:active {
+  background-color: darkgrey;
 }
 
 footer {

@@ -29,7 +29,7 @@ header
     li
         list-style-type: none
         padding: 10px 0 10px 0
-        +setbutton(#ffbb42, darkgrey)
+        +setbutton($color_buttons, darkgrey)
     a
         color: #868686
         padding: 15px
@@ -74,7 +74,7 @@ header
         +setfont(14px, 400, white, "")
         text-transform: uppercase
         width: 211px
-        background-color: #ffbb42
+        background-color: $color_buttons
         +setbutton(lightgrey, darkgrey)
 
 .promo
@@ -108,14 +108,14 @@ header
 .services
     text-align: center
     padding-top: 60px
-    padding-bottom: 100px
+    padding-bottom: 75px
     h2
         +setfont(30px, bold, $color_hx, $lineheight_px)
         letter-spacing: -1px
         text-transform: uppercase
         margin-bottom: -10px
     p
-        +setfont(16px, 400, $color_hx, $lineheight_px)
+        +setfont(16px, 400, $color_px, $lineheight_px)
     .items
         @extend .dflex
         justify-content: center
@@ -138,7 +138,7 @@ header
     @extend .dflex
     justify-content: center
     flex-wrap: nowrap
-    background-color: #ffc155
+    background-color: $color_orange
     align-items: center
     .img
         background: url(../img/about.png) no-repeat center
@@ -147,24 +147,81 @@ header
         background-size: cover
     .text
         flex: 1 1 690px
-        padding: 0 80px 0 80px
+        padding: 20px 80px 20px 80px
         h2
             +setfont(30px, bold, white, $lineheight_px)
             text-transform: uppercase
         p
             +setfont(13px, 400, white, 24px)
             padding-bottom: 20px
-            align-items: flex-start
-        .button
+        input
             +setfont(14px, 400, white, "")
             text-transform: uppercase
             border: 1px solid #e7ad48
-            width: 145px
-            text-align: center
-            padding: 10px 0 10px 0
             +setbutton(lightgrey, darkgrey)
-        a
-            text-decoration: none
+            background-color: $color_buttons
+            width: 145px
+            height: 46px
+
+.price
+    background-color: #e7edf3
+    padding: 100px 0 120px 0
+    text-align: center
+    h2
+        +setfont(30px, bold, $color_hx, "")
+        text-transform: uppercase
+        letter-spacing: -1px
+        margin-bottom: -10px
+    p
+        +setfont(16px, 400, $color_px, $lineheight_px)
+    .items
+        @extend .dflex
+        justify-content: center
+        padding-top: 25px
+        align-items: flex-end
+        .item
+            background-color: white
+            border: 1px solid #ccd5df
+            margin: 5px
+            padding: 25px
+            width: 391px
+            &:hover
+                background-color: $back_blue
+                color: white
+                p, h3, span, li
+                    color: white
+            h3
+                +setfont(25px, 300, $color_plans, $lineheight_px)
+                text-transform: uppercase
+                padding-bottom: 20px
+            .dollar
+                +setfont(36px, 300, $color_orange, $lineheight_px)
+                position: relative
+                top: -20px
+            span
+                +setfont(60px, bold, $color_orange, $lineheight_px)
+                text-transform: uppercase
+            p
+                +setfont(20px, 300, $color_plans, $lineheight_px)
+                font-variant: small-caps
+                margin-top: 0px
+            ul
+                padding-inline-start: 0
+                padding-top: 10px
+            li
+                list-style-type: none
+                +setfont(14px, 400, #b5bbc1, 40px)
+                text-transform: uppercase
+                border-top: 1px solid #e2e9f0
+            input
+                +setfont(14px, 400, white, "")
+                text-transform: uppercase
+                border: none
+                +setbutton(lightgrey, darkgrey)
+                background-color: $color_buttons
+                width: 131px
+                height: 42px
+                margin-bottom: 15px
 
 footer
     background-color: $back_blue
