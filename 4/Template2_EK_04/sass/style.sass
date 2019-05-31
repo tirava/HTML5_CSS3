@@ -13,27 +13,26 @@ header
     justify-content: space-around
     padding: 10px 0 10px 0
     align-items: center
-
-.logo
-    background-image: url(../img/logo.png)
-    background-size: cover
-    width: 50px
-    height: 48px
-    flex-shrink: 0
-
-.menu
-    @extend .dflex
-    letter-spacing: -1px
-    +setfont(14px, 400, "", "")
-    text-transform: uppercase
-    li
-        list-style-type: none
-        padding: 10px 0 10px 0
-        +setbutton($color_buttons, darkgrey)
-    a
-        color: #868686
-        padding: 15px
-        text-decoration: none
+    .logo
+        background-image: url(../img/logo.png)
+        background-size: cover
+        width: 50px
+        height: 48px
+        flex-shrink: 0
+        margin-left: 20px
+    .menu
+        @extend .dflex
+        letter-spacing: -1px
+        +setfont(14px, 400, "", "")
+        text-transform: uppercase
+        li
+            list-style-type: none
+            padding: 10px 0 10px 0
+            +setbutton($color_buttons, darkgrey)
+        a
+            color: #868686
+            padding: 15px
+            text-decoration: none
 
 .boost
     background-color: $back_blue
@@ -189,6 +188,7 @@ header
                 background-color: $back_blue
                 color: white
                 transform: scale(1.1,1.1)
+                transition: 0.5s
                 p, h3, span, li
                     color: white
             h3
