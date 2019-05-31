@@ -296,7 +296,7 @@ header {
 
 .price {
   background-color: #e7edf3;
-  padding: 100px 0 120px 0;
+  padding: 100px 50px 120px 50px;
   text-align: center;
 }
 
@@ -332,12 +332,14 @@ header {
   border: 1px solid #ccd5df;
   margin: 5px;
   padding: 25px;
-  width: 391px;
+  width: 325px;
 }
 
 .price .items .item:hover {
   background-color: #709dca;
   color: white;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .price .items .item:hover p, .price .items .item:hover h3, .price .items .item:hover span, .price .items .item:hover li {
