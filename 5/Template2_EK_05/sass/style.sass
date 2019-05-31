@@ -1,0 +1,231 @@
+
+@import vars
+
+body
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+    max-width: $max-width
+    min-width: $min-width
+    margin: 0 auto
+    
+header
+    @extend .dflex
+    flex-wrap: nowrap
+    justify-content: space-around
+    padding: 10px 0 10px 0
+    align-items: center
+    .logo
+        background-image: url(../img/logo.png)
+        background-size: cover
+        width: 50px
+        height: 48px
+        flex-shrink: 0
+        margin-left: 20px
+    .menu
+        @extend .dflex
+        letter-spacing: -1px
+        +setfont(Lato, 14px, 400, "", "")
+        text-transform: uppercase
+        li
+            list-style-type: none
+            padding: 10px 0 10px 0
+            +setbutton($color_buttons, darkgrey)
+        a
+            color: #868686
+            padding: 15px
+            text-decoration: none
+
+.boost
+    background-color: $back_blue
+    padding: 60px 10px 290px 10px
+    text-align: center
+    h1
+        +setfont("Gotham Black Regular", 35px, 400, white, "")
+        letter-spacing: -1px
+        text-transform: uppercase
+        margin-bottom: -10px
+    p
+        +setfont("Open Sans", 16px, 300, white, "")
+
+.contacts
+    padding-bottom: 50px
+
+    input
+        height: 46px
+        +setfont("Open Sans", 13px, 400, "", "")
+        border-radius: 3px
+        border-style: none
+        padding-left: 40px
+        margin-left: 7px
+        width: 281px
+        margin-top: 10px
+
+    input[type="text"]
+        background: white url('../img/name.png') no-repeat center left 15px
+
+    input[type="email"]
+        background: white url('../img/email.png') no-repeat center left 15px
+
+    input[type="tel"]
+        background: white url('../img/phone.png') no-repeat center left 15px
+        
+    input[type="submit"]
+        padding: 0
+        +setfont("Open Sans", 14px, 400, white, "")
+        text-transform: uppercase
+        width: 211px
+        background-color: $color_buttons
+        +setbutton(lightgrey, darkgrey)
+
+.promo
+    margin: 0 auto
+    height: 343px
+    background: url(../img/macbook.png) no-repeat center
+    position: relative
+    bottom: $bottom_rel
+    .pub
+        // background: url(../img/pub.png) no-repeat center
+        // height: $bottom_rel + 18
+        text-align: center
+        padding-top: 18px 
+        video   
+            width: 445px    
+
+.wheels
+    @extend .dflex
+    justify-content: center
+    margin-top: -$bottom_rel
+    padding-top: 24px
+    .wheel
+        background: url(../img/wheel_pass.png) no-repeat center
+        width: 16px
+        height: 15px
+        padding-left: 10px
+        &:hover
+            background: url(../img/wheel_act.png) no-repeat center
+            cursor: pointer
+
+.services
+    text-align: center
+    padding-top: 60px
+    padding-bottom: 75px
+    h2
+        +setfont("Gotham Black Regular", 30px, 900, $color_hx, $lineheight_px)
+        letter-spacing: -1px
+        text-transform: uppercase
+        margin-bottom: -10px
+    p
+        +setfont("Open Sans", 16px, 400, $color_px, $lineheight_px)
+    .items
+        @extend .dflex
+        justify-content: center
+        padding-top: 30px
+        figure
+            @extend .dflex
+            flex-wrap: nowrap
+            flex: 0 1 $width_items
+            figcaption
+                text-align: left
+                padding-left: 35px
+                h3
+                    +setfont(Lato, 16px, 700, $color_hx, $lineheight_px)
+                    text-transform: uppercase
+                    margin-bottom: -5px
+                p
+                    +setfont("Open Sans", 13px, 400, $color_px, $lineheight_px)
+
+.about
+    @extend .dflex
+    justify-content: center
+    flex-wrap: nowrap
+    background-color: $color_orange
+    align-items: center
+    .img
+        background: url(../img/about.png) no-repeat center
+        width: 850px
+        height: 623px
+        background-size: cover
+    .text
+        flex: 1 1 690px
+        padding: 20px 80px 20px 80px
+        h2
+            +setfont("Gotham Black Regular", 30px, 400, white, $lineheight_px)
+            text-transform: uppercase
+        p
+            +setfont("Open Sans", 13px, 400, white, 24px)
+            padding-bottom: 20px
+        input
+            +setfont(Lato, 14px, 400, white, "")
+            text-transform: uppercase
+            border: 1px solid #e7ad48
+            +setbutton(lightgrey, darkgrey)
+            background-color: $color_buttons
+            width: 145px
+            height: 46px
+
+.price
+    background-color: #e7edf3
+    padding: 100px 50px 120px 50px
+    text-align: center
+    h2
+        +setfont("Gotham Black Regular", 30px, 400, $color_hx, "")
+        text-transform: uppercase
+        letter-spacing: -1px
+        margin-bottom: -10px
+    p
+        +setfont(Lato, 18px, 300, $color_px, $lineheight_px)
+    .items
+        @extend .dflex
+        justify-content: center
+        padding-top: 25px
+        align-items: flex-end
+        .item
+            background-color: white
+            border: 1px solid #ccd5df
+            margin: 5px
+            padding: 25px
+            width: 325px
+            &:hover
+                background-color: $back_blue
+                color: white
+                transform: scale(1.1,1.1)
+                transition: 0.5s
+                p, h3, span, li
+                    color: white
+            h3
+                +setfont(Lato, 25px, 300, $color_plans, $lineheight_px)
+                text-transform: uppercase
+                padding-bottom: 20px
+            .dollar
+                +setfont(Lato, 36px, 400, $color_orange, $lineheight_px)
+                position: relative
+                top: -20px
+            span
+                +setfont(Lato, 60px, 700, $color_orange, $lineheight_px)
+                text-transform: uppercase
+            p
+                +setfont(Lato, 20px, 300, $color_plans, $lineheight_px)
+                font-variant: small-caps
+                margin-top: 0px
+            ul
+                padding-inline-start: 0
+                padding-top: 10px
+            li
+                list-style-type: none
+                +setfont(Lato, 14px, 400, #b5bbc1, 40px)
+                text-transform: uppercase
+                border-top: 1px solid #e2e9f0
+            input
+                +setfont(Lato, 14px, 400, white, "")
+                text-transform: uppercase
+                border: none
+                +setbutton(lightgrey, darkgrey)
+                background-color: $color_buttons
+                width: 131px
+                height: 42px
+                margin-bottom: 15px
+
+footer
+    background-color: $back_blue
+    padding: 20px 10px 20px 10px
+    +setfont("Open Sans", 13px, 400, white, 24px)
+    text-align: center

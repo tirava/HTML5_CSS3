@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400&display=swap");
+@font-face {
+  font-family: 'Gotham Black Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Black Regular"), url("../font/Gotham-Black.woff") format("woff");
+}
+
+.dflex, header, header .menu, .wheels, .services .items, .services .items figure, .about, .price .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  max-width: 1700px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+header {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  width: 50px;
+  height: 48px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 20px;
+}
+
+header .menu {
+  letter-spacing: -1px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  color: "";
+  line-height: "";
+  text-transform: uppercase;
+}
+
+header .menu li {
+  list-style-type: none;
+  padding: 10px 0 10px 0;
+}
+
+header .menu li:hover {
+  cursor: pointer;
+  background-color: #ffbb42;
+}
+
+header .menu li:active {
+  background-color: darkgrey;
+}
+
+header .menu a {
+  color: #868686;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.boost {
+  background-color: #709dca;
+  padding: 60px 10px 290px 10px;
+  text-align: center;
+}
+
+.boost h1 {
+  font-family: "Gotham Black Regular";
+  font-size: 35px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.boost p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  line-height: "";
+}
+
+.contacts {
+  padding-bottom: 50px;
+}
+
+.contacts input {
+  height: 46px;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: "";
+  line-height: "";
+  border-radius: 3px;
+  border-style: none;
+  padding-left: 40px;
+  margin-left: 7px;
+  width: 281px;
+  margin-top: 10px;
+}
+
+.contacts input[type="text"] {
+  background: white url("../img/name.png") no-repeat center left 15px;
+}
+
+.contacts input[type="email"] {
+  background: white url("../img/email.png") no-repeat center left 15px;
+}
+
+.contacts input[type="tel"] {
+  background: white url("../img/phone.png") no-repeat center left 15px;
+}
+
+.contacts input[type="submit"] {
+  padding: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  width: 211px;
+  background-color: #ffbb42;
+}
+
+.contacts input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.contacts input[type="submit"]:active {
+  background-color: darkgrey;
+}
+
+.promo {
+  margin: 0 auto;
+  height: 343px;
+  background: url(../img/macbook.png) no-repeat center;
+  position: relative;
+  bottom: 280px;
+}
+
+.promo .pub {
+  text-align: center;
+  padding-top: 18px;
+}
+
+.promo .pub video {
+  width: 445px;
+}
+
+.wheels {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -280px;
+  padding-top: 24px;
+}
+
+.wheels .wheel {
+  background: url(../img/wheel_pass.png) no-repeat center;
+  width: 16px;
+  height: 15px;
+  padding-left: 10px;
+}
+
+.wheels .wheel:hover {
+  background: url(../img/wheel_act.png) no-repeat center;
+  cursor: pointer;
+}
+
+.services {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 75px;
+}
+
+.services h2 {
+  font-family: "Gotham Black Regular";
+  font-size: 30px;
+  font-weight: 900;
+  color: #394b50;
+  line-height: 22px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.services p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.services .items {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 30px;
+}
+
+.services .items figure {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 550px;
+          flex: 0 1 550px;
+}
+
+.services .items figure figcaption {
+  text-align: left;
+  padding-left: 35px;
+}
+
+.services .items figure figcaption h3 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  color: #394b50;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+
+.services .items figure figcaption p {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.about {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #ffc155;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .img {
+  background: url(../img/about.png) no-repeat center;
+  width: 850px;
+  height: 623px;
+  background-size: cover;
+}
+
+.about .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 690px;
+          flex: 1 1 690px;
+  padding: 20px 80px 20px 80px;
+}
+
+.about .text h2 {
+  font-family: "Gotham Black Regular";
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.about .text p {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+
+.about .text input {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  border: 1px solid #e7ad48;
+  background-color: #ffbb42;
+  width: 145px;
+  height: 46px;
+}
+
+.about .text input:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.about .text input:active {
+  background-color: darkgrey;
+}
+
+.price {
+  background-color: #e7edf3;
+  padding: 100px 50px 120px 50px;
+  text-align: center;
+}
+
+.price h2 {
+  font-family: "Gotham Black Regular";
+  font-size: 30px;
+  font-weight: 400;
+  color: #394b50;
+  line-height: "";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: -10px;
+}
+
+.price p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 300;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.price .items {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.price .items .item {
+  background-color: white;
+  border: 1px solid #ccd5df;
+  margin: 5px;
+  padding: 25px;
+  width: 325px;
+}
+
+.price .items .item:hover {
+  background-color: #709dca;
+  color: white;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.price .items .item:hover p, .price .items .item:hover h3, .price .items .item:hover span, .price .items .item:hover li {
+  color: white;
+}
+
+.price .items .item h3 {
+  font-family: Lato;
+  font-size: 25px;
+  font-weight: 300;
+  color: #818b95;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.price .items .item .dollar {
+  font-family: Lato;
+  font-size: 36px;
+  font-weight: 400;
+  color: #ffc155;
+  line-height: 22px;
+  position: relative;
+  top: -20px;
+}
+
+.price .items .item span {
+  font-family: Lato;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffc155;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price .items .item p {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 300;
+  color: #818b95;
+  line-height: 22px;
+  font-variant: small-caps;
+  margin-top: 0px;
+}
+
+.price .items .item ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding-top: 10px;
+}
+
+.price .items .item li {
+  list-style-type: none;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b5bbc1;
+  line-height: 40px;
+  text-transform: uppercase;
+  border-top: 1px solid #e2e9f0;
+}
+
+.price .items .item input {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  border: none;
+  background-color: #ffbb42;
+  width: 131px;
+  height: 42px;
+  margin-bottom: 15px;
+}
+
+.price .items .item input:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.price .items .item input:active {
+  background-color: darkgrey;
+}
+
+footer {
+  background-color: #709dca;
+  padding: 20px 10px 20px 10px;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  line-height: 24px;
+  text-align: center;
+}

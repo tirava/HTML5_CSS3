@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400&display=swap')
+@font-face
+    font-family: 'Gotham Black Regular'
+    font-style: normal
+    font-weight: normal
+    src: local('Gotham Black Regular'), url('../font/Gotham-Black.woff') format('woff')
+    
+$max-width: 1700px
+$min-width: 480px
+$bottom_rel: 280px //macbook
+$color_hx: #394b50
+$color_px: #7b7b7b
+$color_buttons: #ffbb42
+$color_orange: #ffc155
+$color_plans: #818b95
+$back_blue: #709dca
+$width_items: 550px
+$lineheight_px: 22px
+
+=setfont($family, $size, $weight, $color, $height)
+    font-family: $family 
+    font-size: $size
+    font-weight: $weight
+    color: $color
+    line-height: $height
+
+=setbutton($hover, $active)
+    &:hover
+        cursor: pointer
+        background-color: $hover
+    &:active
+        background-color: $active
+
+.dflex
+    display: flex
+    flex-wrap: wrap
