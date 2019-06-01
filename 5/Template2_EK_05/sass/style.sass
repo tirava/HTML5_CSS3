@@ -29,6 +29,7 @@ header
             list-style-type: none
             padding: 10px 0 10px 0
             +setbutton($color_buttons, darkgrey)
+            transition: background-color $transition_buttons*2
         a
             color: #868686
             padding: 15px
@@ -48,7 +49,6 @@ header
 
 .contacts
     padding-bottom: 50px
-
     input
         height: 46px
         +setfont("Open Sans", 13px, 400, "", "")
@@ -58,22 +58,19 @@ header
         margin-left: 7px
         width: 281px
         margin-top: 10px
-
     input[type="text"]
         background: white url('../img/name.png') no-repeat center left 15px
-
     input[type="email"]
         background: white url('../img/email.png') no-repeat center left 15px
-
     input[type="tel"]
         background: white url('../img/phone.png') no-repeat center left 15px
-        
     input[type="submit"]
         padding: 0
         +setfont("Open Sans", 14px, 400, white, "")
         text-transform: uppercase
         width: 211px
         background-color: $color_buttons
+        transition: background-color $transition_buttons
         +setbutton(lightgrey, darkgrey)
 
 .promo
@@ -100,6 +97,7 @@ header
         width: 16px
         height: 15px
         padding-left: 10px
+        transition: $transition_buttons
         &:hover
             background: url(../img/wheel_act.png) no-repeat center
             cursor: pointer
@@ -157,6 +155,7 @@ header
             +setfont(Lato, 14px, 400, white, "")
             text-transform: uppercase
             border: 1px solid #e7ad48
+            transition: background-color $transition_buttons
             +setbutton(lightgrey, darkgrey)
             background-color: $color_buttons
             width: 145px
@@ -181,15 +180,17 @@ header
         .item
             background-color: white
             border: 1px solid #ccd5df
-            margin: 5px
+            margin: 10px
             padding: 25px
             width: 325px
+            transition: 1s
+            transform-origin: 50% 98.5%
             &:hover
                 background-color: $back_blue
                 color: white
-                transform: scale(1.1,1.1)
-                transition: 0.5s
+                transform: scale(1.1)
                 p, h3, span, li
+                    transition: 1s
                     color: white
             h3
                 +setfont(Lato, 25px, 300, $color_plans, $lineheight_px)
@@ -218,6 +219,7 @@ header
                 +setfont(Lato, 14px, 400, white, "")
                 text-transform: uppercase
                 border: none
+                transition: background-color $transition_buttons
                 +setbutton(lightgrey, darkgrey)
                 background-color: $color_buttons
                 width: 131px

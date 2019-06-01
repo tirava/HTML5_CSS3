@@ -55,6 +55,8 @@ header .menu {
 header .menu li {
   list-style-type: none;
   padding: 10px 0 10px 0;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s;
 }
 
 header .menu li:hover {
@@ -138,6 +140,8 @@ header .menu a {
   text-transform: uppercase;
   width: 211px;
   background-color: #ffbb42;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
 }
 
 .contacts input[type="submit"]:hover {
@@ -179,6 +183,8 @@ header .menu a {
   width: 16px;
   height: 15px;
   padding-left: 10px;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
 }
 
 .wheels .wheel:hover {
@@ -301,6 +307,8 @@ header .menu a {
   line-height: "";
   text-transform: uppercase;
   border: 1px solid #e7ad48;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
   background-color: #ffbb42;
   width: 145px;
   height: 46px;
@@ -353,21 +361,25 @@ header .menu a {
 .price .items .item {
   background-color: white;
   border: 1px solid #ccd5df;
-  margin: 5px;
+  margin: 10px;
   padding: 25px;
   width: 325px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-origin: 50% 98.5%;
+          transform-origin: 50% 98.5%;
 }
 
 .price .items .item:hover {
   background-color: #709dca;
   color: white;
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .price .items .item:hover p, .price .items .item:hover h3, .price .items .item:hover span, .price .items .item:hover li {
+  -webkit-transition: 1s;
+  transition: 1s;
   color: white;
 }
 
@@ -435,6 +447,8 @@ header .menu a {
   line-height: "";
   text-transform: uppercase;
   border: none;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
   background-color: #ffbb42;
   width: 131px;
   height: 42px;
