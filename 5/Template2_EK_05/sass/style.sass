@@ -43,7 +43,7 @@ header
         +setfont("Gotham Black Regular", 35px, 400, white, "")
         letter-spacing: -1px
         text-transform: uppercase
-        margin-bottom: -10px
+        margin-bottom: $hx_p_margin
     p
         +setfont("Open Sans", 16px, 300, white, "")
 
@@ -110,7 +110,7 @@ header
         +setfont("Gotham Black Regular", 30px, 900, $color_hx, $lineheight_px)
         letter-spacing: -1px
         text-transform: uppercase
-        margin-bottom: -10px
+        margin-bottom: $hx_p_margin + 5px
     p
         +setfont("Open Sans", 16px, 400, $color_px, $lineheight_px)
     .items
@@ -163,13 +163,13 @@ header
 
 .price
     background-color: #e7edf3
-    padding: 100px 50px 120px 50px
+    padding: 100px 50px 130px 50px
     text-align: center
     h2
         +setfont("Gotham Black Regular", 30px, 400, $color_hx, "")
         text-transform: uppercase
         letter-spacing: -1px
-        margin-bottom: -10px
+        margin-bottom: $hx_p_margin
     p
         +setfont(Lato, 18px, 300, $color_px, $lineheight_px)
     .items
@@ -183,7 +183,7 @@ header
             margin: 10px
             padding: 25px
             width: 325px
-            transition: 1s
+            transition: $transition_price
             transform-origin: 50% 98.5%
             &:hover
                 background-color: $back_blue
@@ -225,6 +225,41 @@ header
                 width: 131px
                 height: 42px
                 margin-bottom: 15px
+
+.works
+    padding: 100px 50px 100px 50px
+    text-align: center
+    h2
+        +setfont("Gotham Black Regular", 30px, 400, $color_hx, "")
+        text-transform: uppercase
+        letter-spacing: -1px
+        margin-bottom: $hx_p_margin
+    p
+        +setfont(Lato, 18px, 300, $color_px, $lineheight_px)
+    .steps
+        @extend .dflex
+        justify-content: center
+        // padding: 25px 0 35px 0
+        figure
+            width: $width_steps
+            padding: 30px 0 40px 0
+            figcaption
+                text-align: center
+                h3
+                    +setfont(Lato, 20px, 700, $color_hx, $lineheight_px)
+                    text-transform: uppercase
+                    padding-top: 60px
+                p
+                    +setfont("Open Sans", 13px, 400, $color_px, $lineheight_px)
+    input
+            +setfont(Lato, 14px, 400, white, "")
+            text-transform: uppercase
+            border: 1px solid #e7ad48
+            transition: background-color $transition_buttons
+            +setbutton(lightgrey, darkgrey)
+            background-color: $color_buttons
+            width: 165px
+            height: 46px
 
 footer
     background-color: $back_blue
