@@ -239,10 +239,9 @@ header
     .steps
         @extend .dflex
         justify-content: center
-        // padding: 25px 0 35px 0
         figure
             width: $width_steps
-            padding: 30px 0 40px 0
+            padding: 50px 0 40px 0
             figcaption
                 text-align: center
                 h3
@@ -251,15 +250,19 @@ header
                     padding-top: 60px
                 p
                     +setfont("Open Sans", 13px, 400, $color_px, $lineheight_px)
+    .arrows
+        margin: 30px -70px 0 -70px
+    .down
+        margin-top: 130px
     input
-            +setfont(Lato, 14px, 400, white, "")
-            text-transform: uppercase
-            border: 1px solid #e7ad48
-            transition: background-color $transition_buttons
-            +setbutton(lightgrey, darkgrey)
-            background-color: $color_buttons
-            width: 165px
-            height: 46px
+        +setfont(Lato, 14px, 400, white, "")
+        text-transform: uppercase
+        border: 1px solid #e7ad48
+        transition: background-color $transition_buttons
+        +setbutton(lightgrey, darkgrey)
+        background-color: $color_buttons
+        width: 165px
+        height: 46px
 
 footer
     background-color: $back_blue

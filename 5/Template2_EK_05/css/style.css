@@ -496,7 +496,7 @@ header .menu a {
 
 .works .steps figure {
   width: 213px;
-  padding: 30px 0 40px 0;
+  padding: 50px 0 40px 0;
 }
 
 .works .steps figure figcaption {
@@ -519,6 +519,14 @@ header .menu a {
   font-weight: 400;
   color: #7b7b7b;
   line-height: 22px;
+}
+
+.works .arrows {
+  margin: 30px -70px 0 -70px;
+}
+
+.works .down {
+  margin-top: 130px;
 }
 
 .works input {
