@@ -13,13 +13,14 @@ header
     justify-content: space-around
     padding: 10px 0 10px 0
     align-items: center
-    .logo
-        background-image: url(../img/logo.png)
-        background-size: cover
-        width: 50px
-        height: 48px
-        flex-shrink: 0
-        margin-left: 20px
+.logo
+    background-image: url(../img/logo.png)
+    background-size: cover
+    width: 50px
+    height: 48px
+    flex-shrink: 0
+    margin-left: 20px
+    animation: point $transition_macbook/2 linear 0s infinite
 .menu
     @extend .dflex
     letter-spacing: -1px
@@ -347,16 +348,41 @@ header
             transition: background-color $transition_buttons
             +setbutton(lightgrey, darkgrey)
     .map
-        margin: 50px auto
-        background: url(../img/map.png) no-repeat center
-        width: 1102px
+        @extend .dflex
+        flex 1 1 1102px
         height: 549px
-        background-size: cover
+        justify-content: center
+        background: url(../img/map.png) no-repeat center
+        background-size: contain
+        margin: 50px auto
+        .address
+            background: url(../img/address.png) no-repeat center
+            width: 285px
+            height: 298px
+            position: relative
+            right: 30px
+            top: 35px
+            transform-origin: 50% 100%
+            animation: address $transition_macbook 0s infinite
+            // display: none
+            h3
+               padding-top: 40px
+               +setfont("Open Sans", 15px, 700, white, "") 
+               text-transform: uppercase
+            p
+                +setfont("Open Sans", 13px, 400, #aeb7ba, 24px)
+            a
+                +setfont("Open Sans", 13px, 400, #ffbb42, "")
+                text-decoration: none
+        .point
+            position: relative
+            top: 333px
+            left: 138px
 hr
-    color: $color_px
+    color: #ccc
 footer
     text-align: center
-    padding-top: 25px
+    padding-top: 30px
     ul
         @extend .dflex
         justify-content: center
@@ -384,4 +410,3 @@ footer
         background-color: $back_blue
         padding: 10px
         +setfont("Open Sans", 13px, 400, white, 24px)
-        // text-align: center

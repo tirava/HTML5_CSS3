@@ -39,7 +39,7 @@
   content: "\f0e1";
 }
 
-.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps, .clients .comments, .clients .comments article, .clients .comments figure, footer ul {
+.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps, .clients .comments, .clients .comments article, .clients .comments figure, .newsletter .map, footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +77,58 @@
   }
 }
 
+@-webkit-keyframes point {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes point {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes address {
+  25% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes address {
+  25% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 body {
   font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
   max-width: 1700px;
@@ -95,7 +147,7 @@ header {
           align-items: center;
 }
 
-header .logo {
+.logo {
   background-image: url(../img/logo.png);
   background-size: cover;
   width: 50px;
@@ -103,6 +155,8 @@ header .logo {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-left: 20px;
+  -webkit-animation: point 5s linear 0s infinite;
+          animation: point 5s linear 0s infinite;
 }
 
 .menu {
@@ -793,20 +847,68 @@ header .logo {
 }
 
 .newsletter .map {
-  margin: 50px auto;
-  background: url(../img/map.png) no-repeat center;
-  width: 1102px;
   height: 549px;
-  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../img/map.png) no-repeat center;
+  background-size: contain;
+  margin: 50px auto;
+}
+
+.newsletter .map .address {
+  background: url(../img/address.png) no-repeat center;
+  width: 285px;
+  height: 298px;
+  position: relative;
+  right: 30px;
+  top: 35px;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-animation: address 10s 0s infinite;
+          animation: address 10s 0s infinite;
+}
+
+.newsletter .map .address h3 {
+  padding-top: 40px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+}
+
+.newsletter .map .address p {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #aeb7ba;
+  line-height: 24px;
+}
+
+.newsletter .map .address a {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffbb42;
+  line-height: "";
+  text-decoration: none;
+}
+
+.newsletter .map .point {
+  position: relative;
+  top: 333px;
+  left: 138px;
 }
 
 hr {
-  color: #7b7b7b;
+  color: #ccc;
 }
 
 footer {
   text-align: center;
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 footer ul {
