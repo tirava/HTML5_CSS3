@@ -14,6 +14,36 @@
       flex-wrap: wrap;
 }
 
+@-webkit-keyframes macbook {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes macbook {
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 body {
   font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
   max-width: 1700px;
@@ -168,6 +198,11 @@ header .menu a {
 
 .promo .pub video {
   width: 445px;
+}
+
+.promo:hover {
+  -webkit-animation: macbook 10s ease-in-out 0s infinite;
+          animation: macbook 10s ease-in-out 0s infinite;
 }
 
 .wheels {
@@ -364,8 +399,10 @@ header .menu a {
   margin: 10px;
   padding: 25px;
   width: 325px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: background-color 1s, color 1s, -webkit-transform 1s;
+  transition: background-color 1s, color 1s, -webkit-transform 1s;
+  transition: transform 1s, background-color 1s, color 1s;
+  transition: transform 1s, background-color 1s, color 1s, -webkit-transform 1s;
   -webkit-transform-origin: 50% 98.5%;
           transform-origin: 50% 98.5%;
 }
@@ -378,8 +415,8 @@ header .menu a {
 }
 
 .price .items .item:hover p, .price .items .item:hover h3, .price .items .item:hover span, .price .items .item:hover li {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: color 1s;
+  transition: color 1s;
   color: white;
 }
 

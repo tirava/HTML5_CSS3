@@ -19,6 +19,7 @@ $width_steps: 213px
 $lineheight_px: 22px
 $transition_buttons: 0.35s
 $transition_price: 1s
+$transition_macbook: 10s
 $hx_p_margin: -15px
 
 =setfont($family, $size, $weight, $color, $height)
@@ -38,3 +39,11 @@ $hx_p_margin: -15px
 .dflex
     display: flex
     flex-wrap: wrap
+
+@keyframes macbook 
+    10%, 30%, 50%, 70%, 90%
+        transform: rotate(5deg)
+    20%, 40%, 60%, 80%
+        transform: rotate(-5deg)
+    100%
+        transform: rotate(0)
