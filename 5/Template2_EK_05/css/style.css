@@ -6,7 +6,40 @@
   src: local("Gotham Black Regular"), url("../font/Gotham-Black.woff") format("woff");
 }
 
-.dflex, header, header .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps, .clients .comments, .clients .comments article, .clients .comments figure {
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.woff?v=4.7.0") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  padding: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+
+.dflex, header, .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps, .clients .comments, .clients .comments article, .clients .comments figure, footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +105,7 @@ header .logo {
   margin-left: 20px;
 }
 
-header .menu {
+.menu {
   letter-spacing: -1px;
   font-family: Lato;
   font-size: 14px;
@@ -82,23 +115,23 @@ header .menu {
   text-transform: uppercase;
 }
 
-header .menu li {
+.menu li {
   list-style-type: none;
   padding: 10px 0 10px 0;
   -webkit-transition: background-color 0.7s;
   transition: background-color 0.7s;
 }
 
-header .menu li:hover {
+.menu li:hover {
   cursor: pointer;
   background-color: #ffbb42;
 }
 
-header .menu li:active {
+.menu li:active {
   background-color: darkgrey;
 }
 
-header .menu a {
+.menu a {
   color: #868686;
   padding: 15px;
   text-decoration: none;
@@ -143,9 +176,8 @@ header .menu a {
   border-radius: 3px;
   border-style: none;
   padding-left: 40px;
-  margin-left: 7px;
   width: 281px;
-  margin-top: 10px;
+  margin: 10px 0 0 7px;
 }
 
 .contacts input[type="text"] {
@@ -686,13 +718,151 @@ header .menu a {
   color: #99a9ae;
 }
 
+.newsletter {
+  padding: 100px 50px 0 50px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-family: "Gotham Black Regular";
+  font-size: 30px;
+  font-weight: 400;
+  color: #394b50;
+  line-height: "";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: -15px;
+}
+
+.newsletter p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 300;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.newsletter .subscribe {
+  margin: 50px;
+}
+
+.newsletter .subscribe input {
+  height: 47px;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: "";
+  line-height: "";
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  padding-left: 40px;
+  margin: 10px 0 0 7px;
+}
+
+.newsletter .subscribe input[type="text"] {
+  background: white url("../img/name.png") no-repeat center left 15px;
+  width: 308px;
+}
+
+.newsletter .subscribe input[type="email"] {
+  background: white url("../img/email.png") no-repeat center left 15px;
+  width: 388px;
+}
+
+.newsletter .subscribe input[type="submit"] {
+  padding: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  width: 218px;
+  background-color: #ffbb42;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+}
+
+.newsletter .subscribe input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.newsletter .subscribe input[type="submit"]:active {
+  background-color: darkgrey;
+}
+
+.newsletter .map {
+  margin: 50px auto;
+  background: url(../img/map.png) no-repeat center;
+  width: 1102px;
+  height: 549px;
+  background-size: cover;
+}
+
+hr {
+  color: #7b7b7b;
+}
+
 footer {
+  text-align: center;
+  padding-top: 25px;
+}
+
+footer ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .phone {
+  font-family: Lato;
+  font-size: 23px;
+  font-weight: 400;
+  color: #394b50;
+  line-height: "";
+  position: relative;
+  margin-top: -7px;
+}
+
+footer .phone:before {
+  position: absolute;
+  content: "";
+  background: url("../img/phone1.png") no-repeat center;
+  width: 16px;
+  height: 17px;
+  margin: 8px 0 0 -20px;
+}
+
+footer .social {
+  text-align: center;
+  margin: -17px 0 40px 0;
+}
+
+footer .social .fa-twitter {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffc155;
+  line-height: 25px;
+}
+
+footer .social .fa-facebook, footer .social .fa-google-plus, footer .social .fa-linkedin {
+  font-size: 18px;
+  font-weight: 400;
+  color: #709dca;
+  line-height: 25px;
+}
+
+footer .social a:hover {
+  border-bottom: 1px solid #7b7b7b;
+}
+
+footer .copy {
   background-color: #709dca;
-  padding: 20px 10px 20px 10px;
+  padding: 10px;
   font-family: "Open Sans";
   font-size: 13px;
   font-weight: 400;
   color: white;
   line-height: 24px;
-  text-align: center;
 }

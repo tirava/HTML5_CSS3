@@ -4,7 +4,34 @@
     font-style: normal
     font-weight: normal
     src: local('Gotham Black Regular'), url('../font/Gotham-Black.woff') format('woff')
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url('../font/fontawesome-webfont.woff?v=4.7.0') format('woff')
+  font-weight: normal
+  font-style: normal
+
+.fa
+  display: inline-block
+  padding: 5px
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.fa-twitter:before
+  content: "\f099"
+
+.fa-facebook:before
+  content: "\f09a"
+
+.fa-google-plus:before
+  content: "\f0d5"
     
+.fa-linkedin:before
+  content: "\f0e1"
+
 $max-width: 1700px
 $min-width: 480px
 $bottom_rel: 280px //macbook
@@ -25,6 +52,12 @@ $hx_p_margin: -15px
 
 =setfont($family, $size, $weight, $color, $height)
     font-family: $family 
+    font-size: $size
+    font-weight: $weight
+    color: $color
+    line-height: $height
+
+=setfontsocial($size, $weight, $color, $height)
     font-size: $size
     font-weight: $weight
     color: $color

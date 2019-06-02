@@ -20,20 +20,20 @@ header
         height: 48px
         flex-shrink: 0
         margin-left: 20px
-    .menu
-        @extend .dflex
-        letter-spacing: -1px
-        +setfont(Lato, 14px, 400, "", "")
-        text-transform: uppercase
-        li
-            list-style-type: none
-            padding: 10px 0 10px 0
-            +setbutton($color_buttons, darkgrey)
-            transition: background-color $transition_buttons*2
-        a
-            color: #868686
-            padding: 15px
-            text-decoration: none
+.menu
+    @extend .dflex
+    letter-spacing: -1px
+    +setfont(Lato, 14px, 400, "", "")
+    text-transform: uppercase
+    li
+        list-style-type: none
+        padding: 10px 0 10px 0
+        +setbutton($color_buttons, darkgrey)
+        transition: background-color $transition_buttons*2
+    a
+        color: #868686
+        padding: 15px
+        text-decoration: none
 
 .boost
     background-color: $back_blue
@@ -55,9 +55,8 @@ header
         border-radius: 3px
         border-style: none
         padding-left: 40px
-        margin-left: 7px
         width: 281px
-        margin-top: 10px
+        margin: 10px 0 0 7px
     input[type="text"]
         background: white url('../img/name.png') no-repeat center left 15px
     input[type="email"]
@@ -314,8 +313,75 @@ header
                 .position
                     color: #99a9ae
 
-footer
-    background-color: $back_blue
-    padding: 20px 10px 20px 10px
-    +setfont("Open Sans", 13px, 400, white, 24px)
+.newsletter
+    padding: 100px 50px 0 50px
     text-align: center
+    h2
+        +setfont("Gotham Black Regular", 30px, 400, $color_hx, "")
+        text-transform: uppercase
+        letter-spacing: -1px
+        margin-bottom: $hx_p_margin
+    p
+        +setfont("Open Sans", 16px, 300, $color_px, $lineheight_px)
+    .subscribe
+        margin: 50px
+        input
+            height: 47px
+            +setfont("Open Sans", 13px, 400, "", "")
+            border-radius: 3px
+            border: 1px solid #cbcbcb
+            padding-left: 40px
+            margin: 10px 0 0 7px
+        input[type="text"]
+            background: white url('../img/name.png') no-repeat center left 15px
+            width: 308px
+        input[type="email"]
+            background: white url('../img/email.png') no-repeat center left 15px
+            width: 388px
+        input[type="submit"]
+            padding: 0
+            +setfont("Open Sans", 14px, 400, white, "")
+            text-transform: uppercase
+            width: 218px
+            background-color: $color_buttons
+            transition: background-color $transition_buttons
+            +setbutton(lightgrey, darkgrey)
+    .map
+        margin: 50px auto
+        background: url(../img/map.png) no-repeat center
+        width: 1102px
+        height: 549px
+        background-size: cover
+hr
+    color: $color_px
+footer
+    text-align: center
+    padding-top: 25px
+    ul
+        @extend .dflex
+        justify-content: center
+    .phone
+        +setfont(Lato, 23px, 400, $color_hx, "")
+        position: relative
+        margin-top: -7px
+        &:before
+            position: absolute
+            content: ""
+            background: url('../img/phone1.png') no-repeat center
+            width: 16px
+            height: 17px
+            margin: 8px 0 0 -20px
+    .social
+        text-align: center
+        margin: -17px 0 40px 0
+        .fa-twitter
+            +setfontsocial(18px, 400, #ffc155, 25px)
+        .fa-facebook, .fa-google-plus, .fa-linkedin
+            +setfontsocial(18px, 400, #709dca, 25px)
+        a:hover
+            border-bottom: 1px solid $color_px
+    .copy
+        background-color: $back_blue
+        padding: 10px
+        +setfont("Open Sans", 13px, 400, white, 24px)
+        // text-align: center
