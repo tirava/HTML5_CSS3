@@ -6,7 +6,7 @@
   src: local("Gotham Black Regular"), url("../font/Gotham-Black.woff") format("woff");
 }
 
-.dflex, header, header .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps {
+.dflex, header, header .menu, .wheels, .services .items, .services .items figure, .about, .price .items, .works .steps, .clients .comments, .clients .comments article, .clients .comments figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,7 +502,7 @@ header .menu a {
 }
 
 .works {
-  padding: 100px 50px 100px 50px;
+  padding: 100px 50px 110px 50px;
   text-align: center;
 }
 
@@ -588,6 +588,102 @@ header .menu a {
 
 .works input:active {
   background-color: darkgrey;
+}
+
+.clients {
+  padding: 100px 50px 120px 50px;
+  text-align: center;
+  background-color: #ffc155;
+}
+
+.clients h2 {
+  font-family: "Gotham Black Regular";
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  line-height: "";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: -15px;
+}
+
+.clients p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  line-height: 22px;
+}
+
+.clients .comments {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.clients .comments article, .clients .comments figure {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 595px;
+          flex: 0 1 595px;
+}
+
+.clients .comments figure {
+  background-color: white;
+  padding: 20px;
+  margin: 10px 20px 10px 20px;
+}
+
+.clients .comments figure figcaption {
+  text-align: left;
+  padding: 20px 20px 20px 35px;
+}
+
+.clients .comments figure figcaption p {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.clients .comments figure figcaption p:before, .clients .comments figure figcaption p:after {
+  position: relative;
+  font-family: "Brandon Grotesque";
+  font-size: 30px;
+  font-weight: 700;
+  color: #7b7b7b;
+  line-height: 22px;
+}
+
+.clients .comments figure figcaption p:before {
+  content: open-quote;
+  left: -20px;
+}
+
+.clients .comments figure figcaption p:after {
+  content: close-quote;
+  left: 20px;
+  top: 20px;
+}
+
+.clients .comments figure figcaption .name, .clients .comments figure figcaption .position {
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  color: "";
+  line-height: 22px;
+}
+
+.clients .comments figure figcaption .name {
+  color: #f6772c;
+}
+
+.clients .comments figure figcaption .position {
+  color: #99a9ae;
 }
 
 footer {

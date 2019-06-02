@@ -229,7 +229,7 @@ header
                 margin-bottom: 15px
 
 .works
-    padding: 100px 50px 100px 50px
+    padding: 100px 50px 110px 50px
     text-align: center
     h2
         +setfont("Gotham Black Regular", 30px, 400, $color_hx, "")
@@ -265,6 +265,54 @@ header
         background-color: $color_buttons
         width: 165px
         height: 46px
+
+.clients
+    padding: 100px 50px 120px 50px
+    text-align: center
+    background-color: $color_orange
+    h2
+        +setfont("Gotham Black Regular", 30px, 900, white, "")
+        text-transform: uppercase
+        letter-spacing: -1px
+        margin-bottom: $hx_p_margin
+    p
+        +setfont("Open Sans", 16px, 400, white, $lineheight_px)
+    .comments
+        @extend .dflex
+        justify-content: center
+        padding-top: 20px
+        article, figure
+            @extend .dflex
+            flex-wrap: nowrap
+            flex: 0 1 $width_comments
+        article
+            // margin: 10px 10px 10px 10px
+        figure
+            background-color: white
+            padding: 20px
+            margin: 10px 20px 10px 20px
+            figcaption
+                text-align: left
+                padding: 20px 20px 20px 35px
+                p
+                    +setfont("Open Sans", 13px, 400, $color_px, $lineheight_px)
+                    &:before, &:after
+                        position: relative
+                        +setfont("Brandon Grotesque", 30px, 700, $color_px, $lineheight_px)
+                    &:before
+                        content: open-quote
+                        left: -20px
+                    &:after
+                        content: close-quote
+                        left: 20px
+                        top: 20px
+                .name, .position
+                    text-transform: uppercase
+                    +setfont(Lato, 14px, 400, "", $lineheight_px)
+                .name
+                    color: #f6772c
+                .position
+                    color: #99a9ae
 
 footer
     background-color: $back_blue
