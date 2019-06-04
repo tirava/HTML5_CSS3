@@ -16,18 +16,11 @@ body {
 }
 
 header {
-  width: 22.5vw;
+  width: 22.5%;
   background-color: #353541;
 }
 
 header figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin: 0;
 }
 
@@ -61,22 +54,29 @@ header ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
+  margin-top: -6.2rem;
+}
+
+header ul a {
+  text-decoration: none;
+  display: block;
   font-size: 1.4rem;
   font-weight: 500;
   color: white;
   line-height: "";
-  margin-top: -6.2rem;
+}
+
+header ul a:hover {
+  background-color: #aaa;
+}
+
+header ul li {
+  padding: 1.3rem 1.3rem 1.3rem 1.6rem;
+  border-bottom: 0.05rem solid #131321;
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 77.5vw;
+  width: 77.5%;
 }
 
 main .banner img {
@@ -84,13 +84,6 @@ main .banner img {
 }
 
 main .banner figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: center;
   margin: 0;
 }
@@ -98,7 +91,7 @@ main .banner figure {
 main .banner figure figcaption {
   position: relative;
   bottom: 21rem;
-  width: 70vw;
+  width: 90%;
 }
 
 main .banner figure h1 {
@@ -118,7 +111,7 @@ main .banner figure p {
 main .portfolio {
   height: 500px;
   background-color: #ccc;
-  margin-top: -9.5rem;
+  margin-top: -10.8rem;
 }
 
 main .contacts {
