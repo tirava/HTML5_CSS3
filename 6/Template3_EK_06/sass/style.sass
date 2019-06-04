@@ -1,15 +1,96 @@
 
 @import vars
 
+html
+    font-size: 16px
+
 body
-    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+    font-family: 'Raleway', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
     max-width: $max-width
-    min-width: $min-width
+    // min-width: $min-width
     margin: 0 auto
-    
-// header
-//     @extend .dflex
-//     flex-wrap: nowrap
-//     justify-content: space-around
-//     padding: 10px 0 10px 0
-//     align-items: center
+
+.container
+    display: flex
+
+header
+    width: 22.5vw
+    background-color: #353541
+    figure
+        display: flex
+        flex-direction: column
+        margin: 0
+        // position: relative
+        img
+            width: 100%
+        figcaption
+            // position: absolute
+            // top: 120px
+            left: 2rem
+            // margin-bottom: 120px
+            position: relative
+            bottom: 6.2rem
+        h2
+            +setfont(2rem, 500, white, "")
+            margin-bottom: -1.2rem
+        p
+            +setfont(1rem, 500, white, "")
+            // text-transform: uppercase
+    ul
+        margin: 0
+        padding-inline-start: 0
+        list-style-type: none
+        +setfont(1.4rem, 500, white, "")
+        margin-top: -6.2rem
+main
+    display: flex
+    flex-direction: column
+    width: 77.5vw
+    .banner
+        img
+            width: 100%
+            // height: 100%
+        figure
+            display: flex
+            flex-direction: column
+            text-align: center
+            margin: 0
+            figcaption
+                position: relative
+                bottom: 21rem
+                // left: 1em 
+                width: 70vw
+            h1
+                +setfont(3rem, 600, white, "")
+            p
+                +setfont(0.9rem, 500, white, "")
+    .portfolio
+        height: 500px
+        background-color: #ccc
+        margin-top: -9.5rem
+    .contacts
+        height: 300px
+        background-color: #ddd
+    .social
+        height: 200px
+        background-color: #eee
+
+@media screen and (max-width: 1024px)
+    html
+        font-size: 12px
+
+@media screen and (max-width: 768px)
+    html
+        font-size: 10px
+
+@media screen and (max-width: 640px)
+    html
+        font-size: 8px
+
+@media screen and (max-width: 480px)
+    html
+        font-size: 6px
+
+@media screen and (max-width: 320px)
+    html
+        font-size: 4px
