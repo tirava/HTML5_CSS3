@@ -381,7 +381,7 @@ header
 hr
     color: #ccc
 footer
-    text-align: center
+    text-align: center //dont work some <a>
     padding-top: 30px
     ul
         @extend .dflex
@@ -398,12 +398,13 @@ footer
             height: 17px
             margin: 8px 0 0 -20px
     .social
-        text-align: center
         margin: -17px 0 40px 0
         .fa-twitter
             +setfontsocial(18px, 400, #ffc155, 25px)
+            // padding: 10px
         .fa-facebook, .fa-google-plus, .fa-linkedin
             +setfontsocial(18px, 400, #709dca, 25px)
+            // padding: 10px
         a:hover
             border-bottom: 1px solid $color_px
     .copy

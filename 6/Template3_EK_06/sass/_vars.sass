@@ -1,0 +1,20 @@
+$max-width: 1700px
+$min-width: 480px
+
+=setfont($family, $size, $weight, $color, $height)
+    font-family: $family 
+    font-size: $size
+    font-weight: $weight
+    color: $color
+    line-height: $height
+
+=setbutton($hover, $active)
+    &:hover
+        cursor: pointer
+        background-color: $hover
+    &:active
+        background-color: $active
+
+.dflex
+    display: flex
+    flex-wrap: wrap
