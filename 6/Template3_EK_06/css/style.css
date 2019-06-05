@@ -20,29 +20,26 @@ header {
   background-color: #353541;
 }
 
-header figure {
-  margin: 0;
+header .photo {
+  background: url("../img/photo.png") no-repeat center;
+  background-size: cover;
+  height: 13.5rem;
 }
 
-header figure img {
-  width: 100%;
+header .text {
+  padding: 8.8rem 0 0 2rem;
 }
 
-header figure figcaption {
-  left: 2rem;
-  position: relative;
-  bottom: 6.2rem;
-}
-
-header figure h2 {
+header .text h2 {
   font-size: 2rem;
   font-weight: 500;
   color: white;
   line-height: "";
-  margin-bottom: -1.2rem;
+  margin: 0;
+  margin-bottom: -0.4rem;
 }
 
-header figure p {
+header .text p {
   font-size: 1rem;
   font-weight: 500;
   color: white;
@@ -54,7 +51,6 @@ header ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
-  margin-top: -6.2rem;
 }
 
 header ul a {
@@ -64,10 +60,17 @@ header ul a {
   font-weight: 500;
   color: white;
   line-height: "";
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
 }
 
 header ul a:hover {
-  background-color: #aaa;
+  cursor: pointer;
+  background-color: #fb6470;
+}
+
+header ul a:active {
+  background-color: IndianRed;
 }
 
 header ul li {
@@ -79,29 +82,26 @@ main {
   width: 77.5%;
 }
 
-main .banner img {
-  width: 100%;
+main .banner {
+  background: url("../img/banner.png") no-repeat center;
+  background-size: cover;
+  height: 29rem;
 }
 
-main .banner figure {
+main .banner .text {
   text-align: center;
-  margin: 0;
+  padding: 7rem 5rem 0 0;
 }
 
-main .banner figure figcaption {
-  position: relative;
-  bottom: 21rem;
-  width: 90%;
-}
-
-main .banner figure h1 {
+main .banner h1 {
   font-size: 3rem;
   font-weight: 600;
   color: white;
   line-height: "";
+  margin: 0;
 }
 
-main .banner figure p {
+main .banner p {
   font-size: 0.9rem;
   font-weight: 500;
   color: white;
@@ -111,7 +111,6 @@ main .banner figure p {
 main .portfolio {
   height: 500px;
   background-color: #ccc;
-  margin-top: -10.8rem;
 }
 
 main .contacts {
@@ -124,9 +123,21 @@ main .social {
   background-color: #eee;
 }
 
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 11px;
   }
 }
 
@@ -136,15 +147,33 @@ main .social {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 670px) {
   html {
     font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 7px;
   }
 }
 
 @media screen and (max-width: 480px) {
   html {
     font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 5px;
   }
 }
 

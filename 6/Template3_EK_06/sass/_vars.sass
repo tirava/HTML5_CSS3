@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600&display=swap')
     
 $max-width: 275px + 950px
-// $min-width: 480px
+// $min-width: 320px
+$transition_buttons: 0.35s
+$color_buttons: #fb6470
 
 =setfont($size, $weight, $color, $height)
     font-size: $size
@@ -9,12 +11,12 @@ $max-width: 275px + 950px
     color: $color
     line-height: $height
 
-// =setbutton($hover, $active)
-//     &:hover
-//         cursor: pointer
-//         background-color: $hover
-//     &:active
-//         background-color: $active
+=setbutton($hover, $active)
+    &:hover
+        cursor: pointer
+        background-color: $hover
+    &:active
+        background-color: $active
 
 // .dflex
 //     display: flex

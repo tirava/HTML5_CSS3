@@ -14,75 +14,50 @@ body
     display: flex
 
 header
-    // width: 22.5vw
     width: 22.5%
     background-color: #353541
-    figure
-        // display: flex
-        // flex-direction: column
-        margin: 0
-        // position: relative
-        img
-            width: 100%
-        figcaption
-            // position: absolute
-            // top: 120px
-            left: 2rem
-            // margin-bottom: 120px
-            position: relative
-            bottom: 6.2rem
+    .photo
+        background: url('../img/photo.png') no-repeat center
+        background-size: cover
+        height: 13.5rem
+    .text
+        padding: 8.8rem 0 0 2rem
         h2
             +setfont(2rem, 500, white, "")
-            margin-bottom: -1.2rem
+            margin: 0
+            margin-bottom: -0.4rem
         p
             +setfont(1rem, 500, white, "")
-            // text-transform: uppercase
     ul
         margin: 0
         padding-inline-start: 0
         list-style-type: none
-        // +setfont(1.4rem, 500, white, "")
-        margin-top: -6.2rem
         a
             text-decoration: none
             display: block
             +setfont(1.4rem, 500, white, "")
-            &:hover
-                background-color: #aaa
+            transition: background-color $transition_buttons
+            +setbutton($color_buttons, IndianRed)
         li
             padding: 1.3rem 1.3rem 1.3rem 1.6rem
             border-bottom: 0.05rem solid #131321
 main
-    // display: flex
-    // flex-direction: column
-    // width: 77.5vw
     width: 77.5%
     .banner
-        // display: flex
-        img
-            width: 100%
-            // height: 100%
-        figure
-            // display: flex
-            // flex-direction: column
+        background: url('../img/banner.png') no-repeat center
+        background-size: cover
+        height: 29rem
+        .text
             text-align: center
+            padding: 7rem 5rem 0 0
+        h1
+            +setfont(3rem, 600, white, "")
             margin: 0
-            // justify-content: center
-            figcaption
-                position: relative
-                bottom: 21rem
-                // top: -21rem
-                // width: 70vw
-                width: 90%
-            h1
-                +setfont(3rem, 600, white, "")
-            p
-                +setfont(0.9rem, 500, white, "")
-                // width: 90%
+        p
+            +setfont(0.9rem, 500, white, "")
     .portfolio
         height: 500px
         background-color: #ccc
-        margin-top: -10.8rem //21/2
     .contacts
         height: 300px
         background-color: #ddd
@@ -90,21 +65,41 @@ main
         height: 200px
         background-color: #eee
 
+@media screen and (max-width: 1100px)
+    html
+        font-size: 13px    
+
 @media screen and (max-width: 1024px)
     html
         font-size: 12px
+
+@media screen and (max-width: 900px)
+    html
+        font-size: 11px
 
 @media screen and (max-width: 768px)
     html
         font-size: 10px
 
-@media screen and (max-width: 640px)
+@media screen and (max-width: 700px)
+    html
+        font-size: 9px
+
+@media screen and (max-width: 670px)
     html
         font-size: 8px
+
+@media screen and (max-width: 640px)
+    html
+        font-size: 7px
 
 @media screen and (max-width: 480px)
     html
         font-size: 6px
+
+@media screen and (max-width: 400px)
+    html
+        font-size: 5px
 
 @media screen and (max-width: 320px)
     html
