@@ -56,6 +56,7 @@ header ul {
 header ul a {
   text-decoration: none;
   display: block;
+  padding: 1.3rem 1.3rem 1.3rem 1.6rem;
   font-size: 1.4rem;
   font-weight: 500;
   color: white;
@@ -74,7 +75,6 @@ header ul a:active {
 }
 
 header ul li {
-  padding: 1.3rem 1.3rem 1.3rem 1.6rem;
   border-bottom: 0.05rem solid #131321;
 }
 
@@ -134,12 +134,79 @@ main .banner input:active {
   background-color: IndianRed;
 }
 
-main .portfolio h2 {
-  height: 500px;
+main .portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .portfolio .port_header {
+  margin: 2.5rem auto;
+}
+
+main .portfolio .port_header h2 {
+  width: 5rem;
   font-size: 2rem;
   font-weight: 500;
   color: #3e3e3e;
   line-height: 3rem;
+  border-bottom: 0.1rem solid #fb6470;
+}
+
+main .portfolio .port_header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+}
+
+main .portfolio .port_header ul a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: "";
+  padding: 0.8rem 3.5rem 0.8rem 3.5rem;
+}
+
+main .portfolio .port_header ul li {
+  border-bottom: 0.1rem solid #ccc;
+}
+
+main .portfolio .port_header ul li:hover {
+  -webkit-transition: border-bottom 0.35s;
+  transition: border-bottom 0.35s;
+  border-bottom: 0.1rem solid #fb6470;
+}
+
+main .portfolio .port_header ul li:active {
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  background-color: IndianRed;
+}
+
+main .portfolio .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .portfolio .articles figure {
+  margin: 1rem;
+}
+
+main .portfolio .articles figure img {
+  width: 100%;
 }
 
 main .contacts {
@@ -150,6 +217,10 @@ main .contacts {
 main .social {
   height: 200px;
   background-color: #eee;
+}
+
+footer {
+  text-align: center;
 }
 
 @media screen and (max-width: 1100px) {
@@ -194,7 +265,7 @@ main .social {
   header, main {
     width: 100%;
   }
-  ul {
+  header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -204,9 +275,13 @@ main .social {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  ul a > li {
+  header ul a > li {
     border: 0 none;
     border-right: 0.05rem solid #131321;
+  }
+  .articles {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
