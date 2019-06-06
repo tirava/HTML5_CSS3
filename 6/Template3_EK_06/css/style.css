@@ -23,7 +23,7 @@ header {
 header .photo {
   background: url("../img/photo.png") no-repeat center;
   background-size: cover;
-  height: 13.5rem;
+  height: 13.8rem;
 }
 
 header .text {
@@ -106,11 +106,40 @@ main .banner p {
   font-weight: 500;
   color: white;
   line-height: "";
+  line-height: 2rem;
 }
 
-main .portfolio {
+main .banner input {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+  line-height: "";
+  background-color: #fb6470;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  border: none;
+  border-radius: 0.15rem;
+  width: 10.6rem;
+  height: 3rem;
+  margin-left: 37%;
+  margin-top: 2rem;
+}
+
+main .banner input:hover {
+  cursor: pointer;
+  background-color: LightCoral;
+}
+
+main .banner input:active {
+  background-color: IndianRed;
+}
+
+main .portfolio h2 {
   height: 500px;
-  background-color: #ccc;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: 3rem;
 }
 
 main .contacts {
@@ -144,6 +173,40 @@ main .social {
 @media screen and (max-width: 768px) {
   html {
     font-size: 10px;
+  }
+  .container {
+    display: block;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .photo {
+    width: 17.1rem;
+  }
+  header, main {
+    width: 100%;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  ul a > li {
+    border: 0 none;
+    border-right: 0.05rem solid #131321;
   }
 }
 

@@ -7,7 +7,6 @@ html
 body
     font-family: 'Raleway', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
     max-width: $max-width
-    // min-width: $min-width
     margin: 0 auto
 
 .container
@@ -19,7 +18,7 @@ header
     .photo
         background: url('../img/photo.png') no-repeat center
         background-size: cover
-        height: 13.5rem
+        height: 13.8rem
     .text
         padding: 8.8rem 0 0 2rem
         h2
@@ -55,9 +54,22 @@ main
             margin: 0
         p
             +setfont(0.9rem, 500, white, "")
+            line-height: 2rem
+        input
+            +setfont(1.4rem, 500, white, "")
+            background-color: $color_buttons
+            transition: background-color $transition_buttons
+            +setbutton(LightCoral, IndianRed)
+            border: none
+            border-radius: 0.15rem
+            width: 10.6rem
+            height: 3rem
+            margin-left: 37%
+            margin-top: 2rem
     .portfolio
-        height: 500px
-        background-color: #ccc
+        h2
+            height: 500px
+            +setfont(2rem, 500, $grey_color, 3rem)
     .contacts
         height: 300px
         background-color: #ddd
@@ -80,6 +92,23 @@ main
 @media screen and (max-width: 768px)
     html
         font-size: 10px
+    .container
+        display: block
+    header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .photo
+            width: 17.1rem
+    header, main
+        width: 100%
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+        a>li
+            border: 0 none
+            border-right: 0.05rem solid #131321
 
 @media screen and (max-width: 700px)
     html
