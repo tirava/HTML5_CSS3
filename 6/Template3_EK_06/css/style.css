@@ -284,12 +284,13 @@ footer .social {
 
 footer img {
   padding: 0.3rem 1rem 0.3rem 1rem;
+  width: 1rem;
 }
 
 footer img:hover {
-  -webkit-transition: border-bottom 0.35s;
-  transition: border-bottom 0.35s;
-  border-bottom: 0.05rem solid #fb6470;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #ff9999;
 }
 
 footer img:active {
@@ -301,6 +302,10 @@ footer img:active {
 footer .skype {
   border-left: 0.02rem solid #919191;
   border-right: 0.02rem solid #919191;
+}
+
+footer .twit {
+  width: 1.4rem;
 }
 
 footer p {
