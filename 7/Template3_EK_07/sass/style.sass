@@ -1,0 +1,220 @@
+
+@import vars
+
+html
+    font-size: 16px
+
+body
+    font-family: 'Raleway', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+    max-width: $max-width
+    min-width: $min-width
+    margin: 0 auto
+
+.container
+    display: flex
+
+header
+    width: 22.5%
+    background-color: #353541
+    .photo
+        background: url('../img/photo.png') no-repeat center
+        background-size: cover
+        height: 13.8rem
+    .text
+        padding: 8.8rem 0 0 2rem
+        h2
+            +setfont(2rem, 500, white, "")
+            margin: 0
+            margin-bottom: -0.4rem
+        p
+            +setfont(1rem, 500, white, "")
+    ul
+        margin: 0
+        padding-inline-start: 0
+        list-style-type: none
+        a
+            text-decoration: none
+            display: block
+            padding: 1.3rem 1.3rem 1.3rem 1.6rem
+            +setfont(1.4rem, 500, white, "")
+            transition: background-color $transition_buttons
+            +setbutton($color_buttons, IndianRed)
+        li
+            border-bottom: 0.05rem solid #131321
+main
+    width: 77.5%
+    .banner
+        background: url('../img/banner.png') no-repeat center
+        background-size: cover
+        height: 29rem
+        .text
+            text-align: center
+            padding: 7rem 5rem 0 0
+        h1
+            +setfont(3rem, 600, white, "")
+            margin: 0
+        p
+            +setfont(0.9rem, 500, white, "")
+            line-height: 2rem
+        input
+            +setfont(1.4rem, 500, white, "")
+            background-color: $color_buttons
+            transition: background-color $transition_buttons
+            +setbutton(LightCoral, IndianRed)
+            border: none
+            border-radius: 0.15rem
+            width: 10.6rem
+            height: 3rem
+            margin-left: 37%
+            margin-top: 2rem
+    .portfolio
+        display: flex
+        flex-direction: column
+        .port_header
+            margin: 2.5rem auto
+            h2
+                width: 5rem
+                +setfont(2rem, 500, $grey_color, 3rem)
+                border-bottom: 0.1rem solid $color_buttons
+            ul
+                display: flex
+                padding-inline-start: 0
+                list-style-type: none
+                justify-content: center
+                a
+                    text-decoration: none
+                    display: block
+                    +setfont(1.2rem, 500, #3e3e3e, "")
+                    padding: 0.8rem 3.5rem 0.8rem 3.5rem
+                li
+                    border-bottom: 0.1rem solid #ccc
+                    &:hover
+                        transition: border-bottom $transition_buttons
+                        border-bottom: 0.1rem solid $color_buttons
+                    &:active
+                        transition: background-color $transition_buttons
+                        background-color: IndianRed
+        .articles
+            display: flex
+            justify-content: center
+            article
+                transition: transform 1s
+                &:hover
+                    transform: scale(1.1)
+            figure
+                margin: 0.8rem
+                img
+                    width: 100%
+                figcaption
+                    padding: 0.1rem 0 1rem 1rem
+                    margin-top: -0.3rem
+                h2
+                    +setfont(1.4rem, 500, white, "")
+                    padding-left: 0.5rem
+                h3
+                    +setfont(1rem, 500, white, "")
+                    padding-left: 0.5rem
+                a
+                    +setfont(0.9rem, 500, white, "")
+                    padding: 0.5rem
+                    text-decoration: none
+                    &:hover
+                        transition: border-bottom $transition_buttons
+                        border-bottom: 0.05rem solid $color_buttons
+                    &:active
+                        transition: background-color $transition_buttons
+                        background-color: IndianRed
+                .art-1
+                    background-color: #01b9c3
+                .art-2
+                    background-color: #1e2e3e
+    .contacts
+        height: 300px
+        background-color: #ddd
+        border: 1px solid #000
+
+footer
+    background-color: #fff
+    text-align: center
+    position : fixed
+    bottom : 0
+    width: 100%
+    left: 0
+    .social
+        padding: 1rem 0 0.5rem 0
+    img
+        padding: 0.3rem 1rem 0.3rem 1rem
+        width: 1rem
+        &:hover
+            transition: $transition_buttons
+            background-color: #eee
+        &:active
+            transition: background-color $transition_buttons
+            background-color: IndianRed
+    .skype
+        border-left: 0.02rem solid #919191
+        border-right: 0.02rem solid #919191
+    .twit
+        width: 1.4rem
+    p
+        margin: 0 0 0.5rem 0
+    
+@media screen and (max-width: 1100px)
+    html
+        font-size: 15px    
+
+@media screen and (max-width: 1024px)
+    html
+        font-size: 14px
+
+@media screen and (max-width: 900px)
+    html
+        font-size: 13px
+
+@media screen and (max-width: 800px)
+    html
+        font-size: 12px
+    .container
+        display: block
+    header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .photo
+            width: 17.1rem
+    header, main
+        width: 100%
+    header
+        ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-end
+            a>li
+                border: 0 none
+                border-right: 0.05rem solid #131321
+    .articles
+        flex-wrap: wrap
+
+@media screen and (max-width: 700px)
+    html
+        font-size: 10px
+
+@media screen and (max-width: 670px)
+    html
+        font-size: 9px
+
+@media screen and (max-width: 640px)
+    html
+        font-size: 8px
+
+@media screen and (max-width: 480px)
+    html
+        font-size: 7px
+
+@media screen and (max-width: 400px)
+    html
+        font-size: 6px
+
+@media screen and (max-width: 320px)
+    html
+        font-size: 5px
