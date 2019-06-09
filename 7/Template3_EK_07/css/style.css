@@ -24,11 +24,12 @@ header {
 header .photo {
   background: url("../img/photo.png") no-repeat center;
   background-size: cover;
+  width: 100%;
   height: 14rem;
 }
 
 header .photo .text {
-  padding: 9.2rem 0 0 1.5rem;
+  padding: 9rem 0 0 1rem;
 }
 
 header .photo h2 {
@@ -80,7 +81,6 @@ header ul li {
 }
 
 main {
-  background-color: orange;
   grid-column: span 9;
 }
 
@@ -136,6 +136,162 @@ main .banner input:active {
   background-color: IndianRed;
 }
 
+main .portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+main .portfolio .port_header {
+  margin: 2.5rem auto;
+}
+
+main .portfolio .port_header h2 {
+  width: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: 3rem;
+  border-bottom: 0.1rem solid #fb6470;
+}
+
+main .portfolio .port_header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .portfolio .port_header ul a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: "";
+  padding: 0.8rem 3.5rem 0.8rem 3.5rem;
+}
+
+main .portfolio .port_header ul li {
+  border-bottom: 0.1rem solid #ccc;
+}
+
+main .portfolio .port_header ul li:hover {
+  -webkit-transition: border-bottom 0.35s;
+  transition: border-bottom 0.35s;
+  border-bottom: 0.1rem solid #fb6470;
+}
+
+main .portfolio .port_header ul li:active {
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  background-color: IndianRed;
+}
+
+main .portfolio .articles {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 39% 39%;
+      grid-template-columns: 39% 39%;
+  justify-items: center;
+}
+
+main .portfolio .articles article {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+main .portfolio .articles article:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .portfolio .articles figure {
+  margin: 0.8rem;
+}
+
+main .portfolio .articles figure img {
+  width: 100%;
+}
+
+main .portfolio .articles figure figcaption {
+  padding: 0.1rem 0 1rem 1rem;
+  margin-top: -0.3rem;
+}
+
+main .portfolio .articles figure h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+  line-height: "";
+  padding-left: 0.5rem;
+}
+
+main .portfolio .articles figure h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  line-height: "";
+  padding-left: 0.5rem;
+}
+
+main .portfolio .articles figure a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  line-height: "";
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+main .portfolio .articles figure a:hover {
+  -webkit-transition: border-bottom 0.35s;
+  transition: border-bottom 0.35s;
+  border-bottom: 0.05rem solid #fb6470;
+}
+
+main .portfolio .articles figure a:active {
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  background-color: IndianRed;
+}
+
+main .portfolio .articles figure .art-1 {
+  background-color: #01b9c3;
+}
+
+main .portfolio .articles figure .art-2 {
+  background-color: #1e2e3e;
+}
+
+main .portfolio .articles figure .art-3 {
+  background-color: #3f3d3e;
+}
+
+main .contacts {
+  height: 300px;
+  background-color: #ddd;
+  border: 1px solid #000;
+}
+
 footer {
   background-color: #ccc;
   grid-column: span 12;
@@ -153,6 +309,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   html {
     font-size: 13px;
@@ -160,9 +322,6 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-  main {
-    grid-column: span 12;
-  }
   html {
     font-size: 12px;
   }
@@ -197,6 +356,13 @@ footer {
   header ul li {
     border: 0 none;
     border-right: 0.05rem solid #131321;
+  }
+  main {
+    grid-column: span 12;
+  }
+  main .portfolio .articles {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
