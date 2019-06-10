@@ -19,7 +19,7 @@ html, body
 
 header
     grid-column: span 3
-    background-color: #353541
+    background-color: $dark_grey_color
     .photo
         background: url('../img/photo.png') no-repeat center
         background-size: cover
@@ -142,7 +142,7 @@ main
                 .art-4
                     background-color: #0093b5
                 .art-5
-                    background-color: #353541
+                    background-color: $dark_grey_color
                 .art-6
                     background-color: #6176ab
     .contacts
@@ -158,10 +158,33 @@ main
         p, a
             +setfont(0.9rem, 500, $grey_color, "")
         .message, .contact
-            padding: 0 1rem 0 1rem
+            padding: 0 1rem 0 2rem
             width: 35%
-        // .message
-            // display: block
+        .message
+            form
+                display: flex
+                flex-direction: column
+                width: 80%
+                // input
+                    // padding-bottom: 1rem
+                input[type="text"], input[type="email"], textarea
+                    +setfont(0.9rem, 400, $grey_color, "")
+                    font-style: italic
+                    padding: 0.6rem
+                    border: 1px solid $dark_grey_color
+                    margin-bottom: 1.1rem
+                input[type="submit"]
+                    +setfont(1rem, 500, white, "")
+                    background-color: $color_buttons
+                    transition: background-color $transition_buttons
+                    +setbutton(LightCoral, IndianRed)
+                    border: none
+                    border-radius: 0.15rem
+                    width: 6rem
+                    height: 2.2rem
+                    align-self: flex-end
+        .vline
+            border: 1px solid #ccc
         .contact
             figure
                 display: flex
@@ -175,7 +198,7 @@ main
                 figcaption
                     padding-left: 3rem
 .stub
-    background-color: #353541
+    background-color: $dark_grey_color
 footer
     text-align: center
     display: flex
@@ -245,6 +268,9 @@ footer
             display: grid
             .message, .contact
                 width: 100%
+                padding: 0 0 0 2rem
+            .message
+                padding-bottom: 1rem
     footer
         grid-column: 1 / 13
     .stub

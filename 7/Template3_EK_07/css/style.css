@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600&display=swap");
 html {
   font-size: 16px;
 }
@@ -334,8 +334,59 @@ main .contacts p, main .contacts a {
 }
 
 main .contacts .message, main .contacts .contact {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem 0 2rem;
   width: 35%;
+}
+
+main .contacts .message form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+main .contacts .message form input[type="text"], main .contacts .message form input[type="email"], main .contacts .message form textarea {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #3e3e3e;
+  line-height: "";
+  font-style: italic;
+  padding: 0.6rem;
+  border: 1px solid #353541;
+  margin-bottom: 1.1rem;
+}
+
+main .contacts .message form input[type="submit"] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  line-height: "";
+  background-color: #fb6470;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  border: none;
+  border-radius: 0.15rem;
+  width: 6rem;
+  height: 2.2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main .contacts .message form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: LightCoral;
+}
+
+main .contacts .message form input[type="submit"]:active {
+  background-color: IndianRed;
+}
+
+main .contacts .vline {
+  border: 1px solid #ccc;
 }
 
 main .contacts .contact figure {
@@ -485,6 +536,10 @@ footer p {
   }
   main .contacts .message, main .contacts .contact {
     width: 100%;
+    padding: 0 0 0 2rem;
+  }
+  main .contacts .message {
+    padding-bottom: 1rem;
   }
   footer {
     -ms-grid-column: 1;
