@@ -303,7 +303,58 @@ main .portfolio .articles figure .art-6 {
 }
 
 main .contacts {
-  background-color: #ddd;
+  padding: 3rem 0 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contacts h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: "";
+}
+
+main .contacts h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: "";
+}
+
+main .contacts p, main .contacts a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: "";
+}
+
+main .contacts .message, main .contacts .contact {
+  padding: 0 1rem 0 1rem;
+  width: 35%;
+}
+
+main .contacts .contact figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+main .contacts .contact figure img {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 1rem;
+}
+
+main .contacts .contact figure figcaption {
+  padding-left: 3rem;
 }
 
 .stub {
@@ -427,6 +478,13 @@ footer p {
   main .portfolio .articles {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  main .contacts {
+    display: -ms-grid;
+    display: grid;
+  }
+  main .contacts .message, main .contacts .contact {
+    width: 100%;
   }
   footer {
     -ms-grid-column: 1;

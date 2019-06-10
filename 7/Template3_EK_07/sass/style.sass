@@ -15,26 +15,17 @@ html, body
 
 .container
     display: grid
-    // grid-template-rows: 13.8rem 300px
-    // display: flex
-    // min-height: 90%
-    // grid-auto-flow: row
-    // grid-template-columns: 3fr 9fr
     height: 100%
 
 header
-    // background-color: #eee
     grid-column: span 3
-    // width: 22.5%
     background-color: #353541
     .photo
         background: url('../img/photo.png') no-repeat center
         background-size: cover
         width: 100%
         height: 14rem
-        // margin: 0
         .text
-            // padding: 8.8rem 0 0 2rem
             padding: 9rem 0 0 1rem
         h2
             +setfont(2rem, 500, white, "")
@@ -50,7 +41,6 @@ header
             text-decoration: none
             display: block
             padding: 1.3rem 1.3rem 1.3rem 1.6rem
-            // padding: 1.3rem
             +setfont(1.4rem, 500, white, "")
             transition: background-color $transition_buttons
             +setbutton($color_buttons, IndianRed)
@@ -58,9 +48,6 @@ header
             border-bottom: 0.05rem solid #131321
 main
     grid-column: span 9
-    // grid-auto-flow: crow
-    // width: 77.5%
-    // grid-auto-flow: row
     .banner
         background: url('../img/banner.png') no-repeat center
         background-size: cover
@@ -159,24 +146,42 @@ main
                 .art-6
                     background-color: #6176ab
     .contacts
-        background-color: #ddd
+        // background-color: #ddd
         // border: 1px solid #000
+        padding: 3rem 0 4rem 0
+        display: flex
+        justify-content: center
+        h2
+            +setfont(1.5rem, 500, $grey_color, "")
+        h3
+            +setfont(1.2rem, 500, $grey_color, "")
+        p, a
+            +setfont(0.9rem, 500, $grey_color, "")
+        .message, .contact
+            padding: 0 1rem 0 1rem
+            width: 35%
+        // .message
+            // display: block
+        .contact
+            figure
+                display: flex
+                margin: 0
+                padding-top: 1rem
+                img
+                    width: 2rem
+                    height: 2rem
+                    position: relative
+                    top: 1rem
+                figcaption
+                    padding-left: 3rem
 .stub
     background-color: #353541
-    // grid-column: 1 / 3
 footer
-    // background-color: #ccc
-    // grid-column: span 12
-    // display: grid
-    // grid-auto-columns: 3fr 9fr
     text-align: center
     display: flex
     flex-direction: column
     justify-content: flex-end
-    // grid-row: 2
     grid-column: 4 / 13
-    // grid-template-rows: 10%
-    // grid-area: footer
     .social
         padding: 1rem 0 0.5rem 0
     img
@@ -222,8 +227,6 @@ footer
         align-items: center
         .photo
             width: 17rem
-        // header, main
-        //     width: 100%
         ul
             display: flex
             flex-wrap: wrap
@@ -238,6 +241,10 @@ footer
         .portfolio
             .articles
                 grid-template-columns: 1fr
+        .contacts
+            display: grid
+            .message, .contact
+                width: 100%
     footer
         grid-column: 1 / 13
     .stub
